@@ -1,0 +1,21 @@
+<html>
+<head>
+    <title>Loading</title>
+    <meta content="text/html"/>
+    <link rel="stylesheet" type="text/css" href="app-start.css"/>
+    <script type="text/javascript" src="app-start.js"></script>
+</head>
+<body onLoad="onBodyLoad()">
+<!-- A loading spinner with message is displayed until the function onBodyLoad() in app-start.js is called
+    and receives a token successfully. In case there is a failure to receive token from backend,
+    alert with error message is displayed along with the spinner -->
+<div id="loader">
+    <h4 class="text-center">Please wait...</h4>
+    <div class="loading-dots loading-dots--info">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+</body>
+</html>

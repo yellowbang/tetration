@@ -1,0 +1,74 @@
+@mixin stretch($to: 0, $direction: both) {
+    position: absolute;
+
+    @if $direction == both {
+        top: $to;
+        bottom: $to;
+        left: $to;
+        right: $to;
+    }
+    @if $direction == vertical {
+        top: $to;
+        bottom: $to;
+    }
+    @if $direction == horizontal {
+        left: $to;
+        right: $to;
+    }
+}
+
+@mixin stretch-both($v: 0, $h: 0) {
+    position: absolute;
+
+    top: $v;
+    bottom: $v;
+    left: $h;
+    right: $h;
+}
+
+// center relative to closest non-static ancestor (usually the parent is set to position relative)
+@mixin make-centered-relative($pad: 0, $direction: both) {
+    @include stretch($pad, $direction);
+    display: flex;
+    flex-direction: column;
+    @if $direction == both {
+        margin: auto;
+        vertical-align: middle;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    @if $direction == vertical {
+        margin-top: auto;
+        margin-bottom: auto;
+        vertical-align: middle;
+        justify-content: center;
+    }
+    @if $direction == horizontal {
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+@mixin centered-relative-vertical($pad) {
+    @include make-centered-relative($pad, $direction: vertical);
+}
+
+@mixin centered-relative-horizontal($pad) {
+    @include make-centered-relative($pad, $direction: horizontal);
+}
+
+@mixin centered-relative-vertical {
+    @include make-centered-relative($direction: vertical);
+}
+
+@mixin centered-relative-horizontal {
+    @include make-centered-relative($direction: horizontal);
+}
+
+@mixin centered-relative {
+    @include make-centered-relative;
+}
+

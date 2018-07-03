@@ -1,0 +1,21 @@
+{
+    "apicversion": "1.0(0n)",
+    "appid": "fortytwoId",
+    "author": "Cisco",
+    "category": [
+        "Networking",
+        "Cisco Automation and Orchestration"
+    ],
+    "iconfile": "icon.png",
+    "interimversion": "(1a)",
+    "name": "tetration",
+    "permissions": [
+        "admin"
+    ],
+    "permissionslevel": "read",
+    "shortdescr": "ACI app",
+    "signature": 123456,
+    "vendor": "Cisco",
+    "vendordomain": "Cisco",
+    "version": "1.0"
+}

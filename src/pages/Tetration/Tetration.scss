@@ -1,0 +1,10 @@
+@import "../../scss/app.scss";
+
+.Evolve-page-container {
+    overflow: auto;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

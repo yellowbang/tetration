@@ -1,0 +1,34 @@
+@import "../variables.scss";
+
+
+@mixin text-stamped($clr: $lightest-shadow) {
+  color: $clr;
+  font-weight: $font-weight-solid;
+  text-shadow: 0 1px 0 $highlight, 0 -1px 0 $dark-shadow;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin text-embossed($clr: transparent) {
+  color: $clr;
+  font-weight: bold;
+  text-shadow: 0 -1px 1px $highlight, 0 1px 1px $dark-shadow;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin make-text-outline($text-clr: $text-color, $outline-clr: contrast($text-clr), $size: 1px) {
+  text-shadow: -$size -$size 0 $outline-clr, $size -$size 0 $outline-clr, -$size $size 0 $outline-clr, $size $size 0 $outline-clr;
+}
+
+@mixin make-text-outline-sm($text-clr: $text-color, $outline-clr: contrast($text-clr)) {
+  @include make-text-outline($text-clr, $outline-clr, 1px);
+}
+
+@mixin make-text-outline-md($text-clr: $text-color, $outline-clr: contrast($text-clr)) {
+  @include make-text-outline($text-clr, $outline-clr, 2px);
+}
+
+@mixin make-text-outline-lg($text-clr: $text-color, $outline-clr: contrast($text-clr)) {
+  @include make-text-outline($text-clr, $outline-clr, 3px);
+}

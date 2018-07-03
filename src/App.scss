@@ -1,0 +1,271 @@
+@import "./scss/app.scss";
+
+.app-container {
+
+    display: grid;
+    grid-template-areas: "sidebar content";
+    justify-items: stretch;
+    grid-template-columns: min-content auto;
+    grid-template-rows: auto;
+    overflow-y: auto;
+    height: 100%;
+
+    background: $light-gray-5;
+
+    > .sidebar {
+        grid-area: sidebar;
+        width: 280px;
+        position: relative !important;
+        background-color: $color-dark-blue;
+
+        > .sidebar__header {
+            > .sidebar__header-title {
+                white-space: nowrap;
+                overflow: hidden;
+            }
+        }
+
+        li a.selected {
+            background-color: #0073a6;
+            border-top: 1px solid #4096bc;
+            border-bottom: 1px solid #4096bc;
+        }
+    }
+
+    > .content-container {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+
+        > .content-header {
+            color: $content-header-color;
+            background: $content-header-bg;
+            padding: $cui-header-padding;
+
+            .menu-button {
+                margin-right: $padding-xlarge;
+            }
+
+            .right-menu-icons {
+                float: right;
+                display: flex;
+                flex-direction: row;
+
+                > * {
+                    margin-left: $padding-base;
+                }
+            }
+        }
+    }
+
+    .explore-page-popup {
+        height: auto;
+
+        .popup-table {
+            background-color: white;
+            border-radius: 3px;
+            overflow: auto;
+
+            > .explore-page-popup-header {
+                height: 40px;
+                min-height: 40px;
+            }
+
+            .explore-page-popup-content {
+                padding-top: $padding-xxxlarge;
+                overflow: auto;
+
+                > .popup-table-container {
+                    overflow: auto;
+                }
+            }
+        }
+    }
+
+    .adjacent-panel-graphs {
+        .panel {
+            width: 50%;
+            margin: 5px;
+        }
+    }
+}
+
+.display-none {
+    display: none !important;
+}
+
+.opacity-zero {
+    opacity: 0 !important;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-half {
+    flex: 0.5 !important;
+}
+
+.flex-2 {
+    flex: 2 !important;
+}
+
+.flex-3 {
+    flex: 3 !important;
+}
+
+.flex-align-items-end {
+    align-items: flex-end !important;
+}
+
+.align-start {
+    align-items: start !important;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.text-color-gery {
+    color: $grey-text;
+}
+
+.text-color-light-blue {
+    color: $color-light-blue;
+}
+
+.text-color-status-green {
+    color: $status-green;
+}
+
+.text-color-status-red {
+    color: $status-red;
+}
+
+.text-color-dark-blue {
+    color: $color-dark-blue;
+}
+
+.text-color-red {
+    color: $status-red
+}
+
+.blue-background {
+    background-color: #D2EBF6 !important;
+}
+
+.circle-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.color-green {
+    background-color: $status-green;
+}
+
+.color-red {
+    background-color: $status-red;
+}
+
+.color-orange {
+    background-color: $status-yellow;
+}
+
+.color-light-blue {
+    background-color: $color-light-blue;
+}
+
+.color-dark-blue {
+    background-color: $color-dark-blue;
+}
+
+.color-sun-orange {
+    background-color: $color-sun-orange;
+}
+
+.color-purple {
+    background-color: $color-purple;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.popup-table.wide-table {
+    width: 90% !important;
+    min-width: 1100px !important;
+}
+
+.l3-wizard-container {
+    max-width: 800px;
+    min-height: 220px;
+
+    .l3-wizard-content-container {
+        padding-bottom: $padding-base;
+
+        .l3-wizard-note {
+            padding: $padding-base 0;
+            height: 90px;
+
+            .note-title {
+                font-size: 12px;
+                color: $grey-text;
+            }
+
+            textarea {
+                border-radius: 3px;
+                border: 1px solid $light-gray-2;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.toasts-container {
+    position: fixed;
+    bottom: $padding-base;
+    right: $padding-base;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+// override react component css
+.react-contexify {
+    border-top: $color-light-blue 2px solid;
+
+    .react-contexify__item {
+        .react-contexify__item__data:hover {
+            background-color: $color-light-blue !important;
+        }
+    }
+}
+
+// override cui css
+.cui .gauge--info .gauge__circle .mask .fill {
+    background-color: $status-green;
+}
+
+.cui .gauge {
+    background-color: $status-red;
+    position: relative;
+}
+
+.basic-table .pagination-bottom .-pagination .-previous {
+    min-width: 270px;
+}
+
+.basic-table .pagination-bottom .-pagination .-next {
+    min-width: 210px;
+}

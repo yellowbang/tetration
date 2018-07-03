@@ -1,0 +1,93 @@
+@import "./cui/vendor/bootstrap/_variables.scss";
+@import "./cui/utilities/_variables.scss";
+
+/// Vendor (bootstrap) overrides
+$dropdown-box-shadow: 0 0.1rem .5rem rgba(0, 0, 0, 0.175);
+
+
+/// Fonts
+$font-weight-thin:                  200;
+$font-weight-solid:                 500;
+$font-weight-extra-solid:           600;
+$font-weight-heavy:                 700;
+
+
+/// General
+$padding-base:                  10px;
+$padding-small:                 5px;
+$padding-large:                 15px;
+$padding-xlarge:                20px;
+$padding-xxlarge:                30px;
+$padding-xxxlarge:                40px;
+$padding-xsmall:                 3px;
+
+
+$cui-header-padding:            12px 20px;
+
+$label-separation:              1em;
+
+// colors
+$color-green:                       rgba(107,192,73,1);
+$color-red:                         rgba(207,32,48,1);
+$color-light-blue:                  rgba(0, 188, 235, 1);
+$color-dark-blue:                   rgba(0, 80, 115, 1);
+$color-sun-orange:                   #fbab18;
+$color-purple:                   #c93894;
+$anomaly-indicator-color:           rgba(204,0,0,1);
+$query-icon-color:           rgba(237,109,103,1);
+
+// Shadows
+$shadow:                            rgba(0,0,0,.2);
+$light-shadow:                      rgba(0,0,0,.1);
+$lighter-shadow:                    rgba(0,0,0,.05);
+$lightest-shadow:                   rgba(0,0,0,.025);
+$dark-shadow:                       rgba(0,0,0,.3);
+$darker-shadow:                     rgba(0,0,0,.5);
+$darkest-shadow:                    rgba(0,0,0,.75);
+
+// Highlights
+$highlight:                         rgba(255,255,255,.4);
+$weak-highlight:                    rgba(255,255,255,.2);
+$weaker-highlight:                  rgba(255,255,255,.1);
+$weakest-highlight:                  rgba(255,255,255,.05);
+$strong-highlight:                  rgba(255,255,255,.6);
+$strongest-highlight:               rgba(255,255,255,.8);
+$link-container-highlight:          rgba(33, 183, 239, 1);
+
+$light-grey:          rgba(242, 242, 242, 1);
+$grey-text:          rgba(158, 158, 162, 1);
+$darker-grey-text:          rgba(127, 127, 133, 1);
+$color-dark-blue-text:          rgba(0, 80, 115, 1);
+$transparent-background: rgba(146, 146, 146, .5);
+
+// Top level content styling
+$content-header-bg:             $indigo;
+$content-header-color:          $white;
+
+// Empty results message styling
+$empty-results-background:      rgba(254, 254, 254, .7);
+$empty-results-color:           rgba(31, 31, 32, .7);
+$empty-results-font-size:       12px;
+$empty-results-font-weight:     $font-weight-extra-solid;
+
+// p42 -------------------------------------------
+
+$query-result-container-min-height: 300px;
+
+// Header
+$header-height: 54px;
+$header-icon-size: 30px;
+
+// Component styling
+// Tile
+$tile-height: 80px;
+$tile-image-size: 24px;
+
+// PointToPoint
+$big-point-size: 48px;
+$big-point-radius: 24px;
+$small-point-size: 24px;
+$small-point-radius: 12px;
+
+// Typeahead
+$typeahead-clear-buttons-size: 19px;
